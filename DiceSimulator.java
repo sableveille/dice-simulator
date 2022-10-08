@@ -19,75 +19,75 @@ public class DiceSimulator {
 
         boolean running = true;
 
-//        while(running) {
-//            Scanner scan = new Scanner(System.in);
-//            out.println("Select type of rolling: ");
-//            out.println(" 1.  Roll a single die\n 2.  Get highest/lowest of multiple dice\n 3.  Get the total of multiple dice\n 4.  Get list of multiple dice rolls\n 5.  Average of a single die\n 6.  Average of multiple dice\n 7.  Average of multiple dice if the highest/lowest is chosen\n 8.  Average of multiple dice rerolling numbers lower than X once\n 9.  Average of multiple dice rerolling the lowest X dice if they are below average\n 10. Probability to roll more or less than X on Y dice\n 11. Probabilities of rolling the same number any number of times on X dice\n");
-//            //set up input
-//            int rollType = Integer.parseInt(scan.nextLine());
-//            out.println("Enter dice size: ");
-//            int size = Integer.parseInt(scan.nextLine());
-//
-//            out.println("Enter number of dice");
-//            int dice = Integer.parseInt(scan.nextLine());
-//
-//            boolean high;
-//            int highestRerolled;
-//            int reroll;
-//            int number;
-//
-//            switch (rollType) {
-//                case 1:
-//                    out.println(roll(size));
-//                    break;
-//                case 2:
-//                    out.println("High(true) or low(false)?");
-//                    high = Boolean.parseBoolean(scan.nextLine());
-//                    out.println(rollMultiHighLow(size, dice, high));
-//                    break;
-//                case 3:
-//                    System.out.println(rollMultiTotal(size, dice));
-//                    break;
-//                case 4:
-//                    printArr(rollMultiList(size, dice));
-//                    break;
-//                case 5:
-//                    System.out.println(averageSingle(size));
-//                    break;
-//                case 6:
-//                    System.out.println(averageRollMultiple(size, dice));
-//                    break;
-//                case 7:
-//                    out.println("High(true) or low(false)?");
-//                    high = Boolean.parseBoolean(scan.nextLine());
-//                    System.out.println(averageMultiHighLow(size, dice, high));
-//                    break;
-//                case 8:
-//                    out.println("Enter the highest number re-rolled");
-//                    highestRerolled = Integer.parseInt(scan.nextLine());
-//                    System.out.println(averageRerollLessThan(size, dice, highestRerolled));
-//                    break;
-//                case 9:
-//                    out.println("Enter the number of dice re-rolled");
-//                    reroll = Integer.parseInt(scan.nextLine());
-//                    System.out.println(averageTotalRerollNum(size, dice, reroll));
-//                    break;
-//                case 10:
-//                    out.println("What number higher/lower than?");
-//                    number = Integer.parseInt(scan.nextLine());
-//                    out.println("High(true) or low(false)?");
-//                    high = Boolean.parseBoolean(scan.nextLine());
-//                    System.out.println(probRollMoreLessXonYDice(size, dice, high, number));
-//                    break;
-//                case 11:
-//                    System.out.println(probOfXNuminDice(size, dice));
-//                    break;
-//            }
-//
-//            out.println("Run again? Y N");
-//            String ans = scan.nextLine();
-//            if(!(ans.equals("Y") || ans.equals("y"))){running = false;}
-//        }
+        while(running) {
+            Scanner scan = new Scanner(System.in);
+            out.println("Select type of rolling: ");
+            out.println(" 1.  Roll a single die\n 2.  Get highest/lowest of multiple dice\n 3.  Get the total of multiple dice\n 4.  Get list of multiple dice rolls\n 5.  Average of a single die\n 6.  Average of multiple dice\n 7.  Average of multiple dice if the highest/lowest is chosen\n 8.  Average of multiple dice rerolling numbers lower than X once\n 9.  Average of multiple dice rerolling the lowest X dice if they are below average\n 10. Probability to roll more or less than X on Y dice\n 11. Probabilities of rolling the same number any number of times on X dice\n");
+            //set up input
+            int rollType = Integer.parseInt(scan.nextLine());
+            out.println("Enter dice size: ");
+            int size = Integer.parseInt(scan.nextLine());
+
+            out.println("Enter number of dice");
+            int dice = Integer.parseInt(scan.nextLine());
+
+            boolean high;
+            int highestRerolled;
+            int reroll;
+            int number;
+
+            switch (rollType) {
+                case 1:
+                    out.println(roll(size));
+                    break;
+                case 2:
+                    out.println("High(true) or low(false)?");
+                    high = Boolean.parseBoolean(scan.nextLine());
+                    out.println(rollMultiHighLow(size, dice, high));
+                    break;
+                case 3:
+                    System.out.println(rollMultiTotal(size, dice));
+                    break;
+                case 4:
+                    printArr(rollMultiList(size, dice));
+                    break;
+                case 5:
+                    System.out.println(averageSingle(size));
+                    break;
+                case 6:
+                    System.out.println(averageRollMultiple(size, dice));
+                    break;
+                case 7:
+                    out.println("High(true) or low(false)?");
+                    high = Boolean.parseBoolean(scan.nextLine());
+                    System.out.println(averageMultiHighLow(size, dice, high));
+                    break;
+                case 8:
+                    out.println("Enter the highest number re-rolled");
+                    highestRerolled = Integer.parseInt(scan.nextLine());
+                    System.out.println(averageRerollLessThan(size, dice, highestRerolled));
+                    break;
+                case 9:
+                    out.println("Enter the number of dice re-rolled");
+                    reroll = Integer.parseInt(scan.nextLine());
+                    System.out.println(averageTotalRerollNum(size, dice, reroll));
+                    break;
+                case 10:
+                    out.println("What number higher/lower than?");
+                    number = Integer.parseInt(scan.nextLine());
+                    out.println("High(true) or low(false)?");
+                    high = Boolean.parseBoolean(scan.nextLine());
+                    System.out.println(probRollMoreLessXonYDice(size, dice, high, number));
+                    break;
+                case 11:
+                    System.out.println(probOfXNuminDice(size, dice));
+                    break;
+            }
+
+            out.println("Run again? Y N");
+            String ans = scan.nextLine();
+            if(!(ans.equals("Y") || ans.equals("y"))){running = false;}
+        }
 
 
         printMat(rollMultiDiffSizesList(20, 3, 8, 3 ));
@@ -96,28 +96,28 @@ public class DiceSimulator {
         out.println(averageMultiHighLow(20, 2, false));
         out.println(expectedVal2HighLow(20, false));
 
-//        out.println(averageSingle(20));
-//        out.println(averageMultiHighLow(20,2, true));
-//        out.println(averageMultiHighLow(20,2, false));
-//        out.println(averageMultiHighLow(20,3, true));
-//        out.println(averageMultiHighLow(20,3, false));
-//        out.println();
+        out.println(averageSingle(20));
+        out.println(averageMultiHighLow(20,2, true));
+        out.println(averageMultiHighLow(20,2, false));
+        out.println(averageMultiHighLow(20,3, true));
+        out.println(averageMultiHighLow(20,3, false));
+        out.println();
 
-        //out.println(averageMultiHighLow2(20,2, true));
-        //out.println(averageMultiHighLow2(20,2, false));
-        //out.println();
+        out.println(averageMultiHighLow2(20,2, true));
+        out.println(averageMultiHighLow2(20,2, false));
+        out.println();
 
-//        out.println(averageRollMultiple(6, 8));
-//        out.println(averageRerollLessThan(12, 1, 3));
-//        out.println(averageTotalRerollNum(6, 8, 5));
-//
-//        out.println();
-//        out.println(probRollMoreLessXonYDice(20, 1, true, 20));
-//        out.println(probRollMoreLessXonYDice(20, 2, true, 20));
-//        out.println(probRollMoreLessXonYDice(20, 3, true, 20));
-//        out.println();
-//        printArr(probOfXNuminDice(20, 9));//now working
-//        printArr(rollMultiList(20,3));
+        out.println(averageRollMultiple(6, 8));
+        out.println(averageRerollLessThan(12, 1, 3));
+        out.println(averageTotalRerollNum(6, 8, 5));
+
+        out.println();
+        out.println(probRollMoreLessXonYDice(20, 1, true, 20));
+        out.println(probRollMoreLessXonYDice(20, 2, true, 20));
+        out.println(probRollMoreLessXonYDice(20, 3, true, 20));
+        out.println();
+        printArr(probOfXNuminDice(20, 9));//now working
+        printArr(rollMultiList(20,3));
     }
     public static int roll(int size){
         return 1 + (int)(Math.random() * size);
