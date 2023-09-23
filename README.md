@@ -1,2 +1,3 @@
 # dice-simulator
-simulates rolling dice in different combinations
+This program calculates statistical values when rolling dice in various unusual ways common to table top role playing games (TTRPGs)
+
